@@ -28,7 +28,8 @@ var socket = io("URL")
 ...With:
 ```js
 var io = require("tbmodular")
-var socket = io("URL, leave empty for default trollbox")
+var socket = io(/* leave empty */)
+io.idontremember("URL") // optional
 
 // Code here
 ```
