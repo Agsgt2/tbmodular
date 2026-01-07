@@ -29,7 +29,7 @@ var socket = io("URL")
 ```js
 var io = require("tbmodular")
 var socket = io(/* leave empty */)
-io.idontremember("URL") // optional
+socket.connectTo("URL") // Optional
 
 // Code here
 ```
