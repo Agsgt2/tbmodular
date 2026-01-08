@@ -2,13 +2,10 @@ const io = require('socket.io-client');
 
 var cURL = "https://windows93.net:8081";
 
-function connectTo(url){
-   cURL = url
-}
-
 function appendJSON(x,y) {
     return Object.fromEntries(Object.entries(x).concat(Object.entries(y)));
 }
+
 class BotSocket extends io {
     
     constructor(url = cURL,options = {}) {
@@ -70,4 +67,5 @@ function Bot(...args) {
     return new BotSocket(...args)
 }
 
-module.exports = Bot;
+
+module.exports = {Bot, cURL};
