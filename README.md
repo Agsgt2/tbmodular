@@ -8,7 +8,7 @@ You can use this library instead of `socket.io-client`.
 var io = require("tbmodular") // It will be a actual library soon...
 
 var pref = "!"
-var socket = io(/* leave empty like tbparty for default trollbox */)
+var socket = io(/* leave empty like tbparty */)
 
 socket.emit("user joined", "bot", "#696969", "", "")
 socket.on("message", data => {
@@ -27,9 +27,11 @@ var socket = io("URL")
 ```
 ...With:
 ```js
-var io = require("tbmodular")
-var socket = io(/* leave empty */)
-socket.connectTo("URL") // Optional
+var tbm = require("tbmodular")
+tbm.cURL = "URL" // Optional
+var socket = tbm.Bot(/* leave empty */)
 
 // Code here
 ```
+## Credits
+Thank you for the library [tbparty](https://www.npmjs.com/package/tbparty)!
