@@ -5,10 +5,10 @@ This is just [tbparty](https://www.npmjs.com/package/tbparty), but like the name
 ## What to do?
 You can use this library instead of `socket.io-client`.
 ```js
-var io = require("tbmodular") // It will be a actual library soon...
+var tbm = require("tbmodular") // It will be a actual library soon...
 
 var pref = "!"
-var socket = io(/* leave empty like tbparty */)
+var socket = tbm.Bot(/* leave empty like tbparty */)
 
 socket.emit("user joined", "bot", "#696969", "", "")
 socket.on("message", data => {
@@ -33,5 +33,14 @@ var socket = tbm.Bot(/* leave empty */)
 
 // Code here
 ```
+### All Recently New! (ARN)
+Now, you don't need to use `socket.emit()`! You can simply use `socket.join()`, with the following arguments:
+```json
+{
+  name: "bot",      // The name of the bot
+  color: "#696969", // The color of the bot
+}
+```
+
 ## Credits
 Thank you for the library [tbparty](https://www.npmjs.com/package/tbparty)!
