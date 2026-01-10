@@ -51,7 +51,7 @@ class BotSocket extends io {
                     break;
             }
         }
-		this.join(info){
+		this.join = (info) => {
 			this.emit("user joined", info.name, info.color)
 		}
         this.startTyping = () => {
@@ -72,5 +72,6 @@ function Bot(...args) {
 
 
 module.exports = {Bot, cURL};
+
 
 
